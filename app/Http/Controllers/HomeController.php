@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index(){
         $allTrips= Trip::all();
-        $fromRome= Trip::where('departure_city', 'Rome');
-        // dump($allTrips);
-        return view('home', compact('allTrips'));
+        $fromRome= Trip::where('departure_city', 'Rome')->get();
+        // dump($fromRome);
+        return view('home', compact('allTrips', 'fromRome'));
     }
 }

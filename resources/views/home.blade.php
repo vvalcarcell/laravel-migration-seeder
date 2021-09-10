@@ -17,6 +17,18 @@
         </ul>
 
     @endforeach
+
+
+    <h1>All trips departing from fromRome</h1>
+
+
+    @foreach($fromRome as $trip)
+
+        <ul>
+            <li>{{$trip -> package_name}}</li>
+        </ul>
+
+    @endforeach
     
 </body>
 </html>
